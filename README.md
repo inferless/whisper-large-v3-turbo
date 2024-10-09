@@ -43,10 +43,10 @@ curl --location '<your_inference_url>' \
           --data '{
                 "inputs": [
                     {
-                    "audio_url": [
+                    "data": [
                         "http://thepodcastexchange.ca/s/Porsche-Macan-July-5-2018-1.mp3"
                     ],
-                    "name": "message",
+                    "name": "audio_url",
                     "shape": [
                         1
                     ],
