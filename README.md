@@ -1,10 +1,6 @@
 # Tutorial - Deploy Whisper-large-v3-turbo using Inferless
 Whisper-large-v3-turbo is an efficient automatic speech recognition model by OpenAI, featuring 809 million parameters and significantly faster than its predecessor, Whisper large-v3. It excels in diverse applications like transcription and translation, processing audio effectively while handling background noise and various accents.
 
-8.140140460899783 seconds
-Inference Time: 0.459 seconds for 10 second audio clip
-
-
 ## TL;DR:
 - Deployment of Whisper-large-v3-turbo model using [Transformers](https://github.com/huggingface/transformers).
 - You can expect an average latency of `0.459 sec` for 10 sec audio clip. This setup has an average cold start time of `8.14 sec`.
