@@ -33,6 +33,31 @@ Log in to your inferless account, select the workspace you want the model to be 
   
 Refer [this link](https://docs.inferless.com/integrations/git-custom-code/git--custom-code) for more information on model import.
 
+---
+## Curl Command
+Following is an example of the curl command you can use to make inference. You can find the exact curl command in the Model's API page in Inferless.
+```bash
+curl --location '<your_inference_url>' \
+          --header 'Content-Type: application/json' \
+          --header 'Authorization: Bearer <your_api_key>' \
+          --data '{
+                "inputs": [
+                    {
+                    "audio_url": [
+                        "http://thepodcastexchange.ca/s/Porsche-Macan-July-5-2018-1.mp3"
+                    ],
+                    "name": "message",
+                    "shape": [
+                        1
+                    ],
+                    "datatype": "BYTES"
+                    }
+                ]
+                }
+            '
+```
+
+
 
 ---
 ## Customizing the Code
