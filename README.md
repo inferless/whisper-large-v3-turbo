@@ -3,7 +3,7 @@ Whisper-large-v3-turbo is an efficient automatic speech recognition model by Ope
 
 ## TL;DR:
 - Deployment of Whisper-large-v3-turbo model using [Transformers](https://github.com/huggingface/transformers).
-- You can expect an average latency of `0.459 sec` for 10 sec audio clip. This setup has an average cold start time of `8.14 sec`.
+- You can expect an average latency of `0.46 sec` for 10 sec audio clip. This setup has an average cold start time of `8.14 sec`.
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
