@@ -11,7 +11,7 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': [True]
     },
-    "return_timestamps": {
+    "max_new_tokens": {
         'datatype': 'INT64',
         'required': False,
         'shape': [1],
