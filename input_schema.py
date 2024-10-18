@@ -6,10 +6,10 @@ INPUT_SCHEMA = {
         'example': ["https://github.com/rbgo404/Files/raw/main/jeanNL.mp3"]
     },
     "return_timestamps": {
-        'datatype': 'BOOL',
+        'datatype': 'STRING',
         'required': False,
         'shape': [1],
-        'example': [True]
+        'example': ["word"]
     },
     "max_new_tokens": {
         'datatype': 'INT64',
