@@ -31,7 +31,7 @@ class InferlessPythonModel:
         return_timestamps = inputs.get("return_timestamps", "word") # Can be True, False, or "word"
         max_new_tokens = inputs.get("max_new_tokens")
         language = inputs.get("language")
-        task = inputs.get("task")
+        task = inputs.get("task") # Can be "transcribe" or "translate"
         temperature = inputs.get("temperature")
 
         # Convert return_timestamps if needed
