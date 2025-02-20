@@ -1,10 +1,13 @@
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
+from huggingface_hub import snapshot_download
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
 
 class InferlessPythonModel:
-        
     def initialize(self):
         model_id = "openai/whisper-large-v3-turbo"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         model = AutoModelForSpeechSeq2Seq.from_pretrained(
             model_id,
             torch_dtype=torch.float16,
@@ -23,7 +26,6 @@ class InferlessPythonModel:
             torch_dtype=torch.float16,
             return_timestamps=True
         )
-
     def infer(self, inputs):
         # Extracting inputs with default values
         audio_url = inputs["audio_url"]
@@ -61,7 +63,6 @@ class InferlessPythonModel:
             "to_timestamp": list(to_timestamp),
             "chunk_text": list(chunk_text),
         }
-
 
     def finalize(self):
         self.pipe = None
