@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 
@@ -5,6 +8,7 @@ class InferlessPythonModel:
         
     def initialize(self):
         model_id = "openai/whisper-large-v3-turbo"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         model = AutoModelForSpeechSeq2Seq.from_pretrained(
             model_id,
             torch_dtype=torch.float16,
